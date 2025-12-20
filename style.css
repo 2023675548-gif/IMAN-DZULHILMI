@@ -1,0 +1,199 @@
+/* Pastikan body mengisi keseluruhan viewport */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Container untuk video */
+.video-container {
+    position: fixed;
+    /* Kekal di tempat yang sama walaupun pengguna skrol */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    /* Meletakkannya di bawah kandungan lain */
+    overflow: hidden;
+}
+
+/* Gayakan elemen video itu sendiri */
+.video-container video {
+    /* Seting untuk memenuhi container sambil mengekalkan nisbah aspek */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Gunakan transform untuk memastikan video sentiasa berpusat */
+    transform: translate(-50%, -50%);
+    /* Objek fit cover adalah alternatif moden dan lebih mudah */
+    /* object-fit: cover; 
+    object-position: center; */
+}
+
+/* Pastikan kandungan lain berada di lapisan atas dan boleh dibaca */
+.content {
+    position: relative;
+    z-index: 1;
+    /* Di atas video */
+    color: rgb(9, 9, 9);
+    /* Contoh, warna teks yang mudah dibaca di atas video */
+    padding: 20px;
+    /* Anda mungkin perlu menambah lapisan legap (overlay) di atas video 
+       untuk meningkatkan kebolehbacaan teks */
+}
+
+/* === Gaya Umum === */
+body {
+    font-family: 'Orbitron', sans-serif;
+    /* Font menarik untuk teks umum */
+    margin: 0;
+    padding: 0;
+    background-color: #f1e2e2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* === 🌟 Gaya Navigation Bar (NAVBAR) 🌟 === */
+.navbar {
+    background-color: #000000;
+    /* Latar belakang Hitam */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    /* Untuk meletakkan logo di kiri, links di kanan */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    /* Menjadikan nav bar sentiasa kelihatan di atas */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo "IMAN HILMI" (Kiri) */
+.logo {
+    color: #ffd700;
+    /* Teks Kuning Emas */
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Monoton', cursive;
+    /* Font yang sangat 'wow' */
+    /* Animasi Ringkas: Pendaran (Glow) */
+    text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffc107;
+    animation: pulse 4s infinite;
+    /* Animasi berdegup perlahan */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Link Navigasi (Kanan) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #ffeb3b;
+    /* Teks Kuning */
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Hover Effect (Kesan apabila kursor lalu) */
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #ffd700;
+    /* Latar belakang Kuning */
+    color: #000000;
+    /* Teks Hitam */
+    box-shadow: 0 0 15px #ffd700;
+    /* Glow Kuning pada hover */
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    /* Gaya untuk page yang sedang aktif */
+    font-weight: 700;
+    border: 2px solid #000;
+}
+
+
+/* === Gaya Kandungan === */
+
+.hero-section {
+    background-color: #dddada;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    color: #000000;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #ffe082;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #ffc107;
+}
+
+.card h3 {
+    color: #333;
+    margin-top: 0;
+}

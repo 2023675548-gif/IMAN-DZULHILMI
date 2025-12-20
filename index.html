@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAN HILMI - Overview</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* 1. ANIMATION GEMPAK UNTUK TAJUK */
+    .hero-section h1 {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px #ff0000;
+      animation: neonGlow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes neonGlow {
+      from {
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow;
+        opacity: 1;
+      }
+
+      to {
+        text-shadow: 0 0 20px #ff0, 0 0 30px #ffae00, 0 0 50px #ffae00;
+        opacity: 0.8;
+      }
+    }
+
+    /* 2. FLOATING GADGET WAKTU & TARIKH (DI PENJURU KANAN BAWAH) */
+    .floating-clock {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      /* Hitam Transparent */
+      color: yellow;
+      padding: 15px;
+      border-radius: 15px;
+      border: 2px solid yellow;
+      font-family: 'Orbitron', sans-serif;
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+      z-index: 1000;
+      text-align: center;
+      min-width: 150px;
+    }
+
+    /* 3. HOVER PROFILE */
+    .profile-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px yellow !important;
+      transition: all 0.4s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="floating-clock">
+    <div id="date" style="font-size: 11px; margin-bottom: 5px; color: white; letter-spacing: 1px;"></div>
+    <div id="clock" style="font-size: 22px; font-weight: bold; letter-spacing: 2px;">00:00:00</div>
+  </div>
+
+  <div class="video-container">
+    <video autoplay muted loop poster="poster_image.jpg">
+      <source src="WallpaperGerak.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">IMAN HILMI</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Overview</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="family.html">Family</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <header class="hero-section" style="text-align: center; padding: 40px 0;">
+      <h1>Welcome to Iman Hilmi's Biodata</h1>
+      <p style="color: yellow; font-family: 'Orbitron'; letter-spacing: 2px;">Maklumat Ringkas Mengenai Diri Saya.</p>
+    </header>
+
+    <table border="0" width="1200" align="center" cellpadding="30" cellspacing="0" bgcolor="#f4f4f4"
+      style="border-radius: 15px; font-family: 'Trebuchet MS', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+
+      <tr>
+        <td width="30%" align="center" valign="middle">
+          <div class="profile-box"
+            style="background-color: white; padding: 10px; border: 2px solid yellow; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+            <img src="PROFILE.jpg" alt="Iman Dzulhilmi" width="250" style="display: block; border-radius: 5px;">
+          </div>
+          <h3 style="color: #333; margin-top: 15px; letter-spacing: 1px; font-family: 'Orbitron';">IMAN DZULHILMI</h3>
+        </td>
+
+        <td width="70%" valign="top" style="line-height: 1.8;">
+          <div
+            style="background-color: black; color: yellow; display: inline-block; padding: 8px 25px; border-radius: 5px; margin-bottom: 20px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; border: 1px solid yellow;">
+            MY PROFILE
+          </div>
+
+          <p style="font-size: 18px; color: #333; text-align: justify; margin-top: 0;">
+            My name is <b>Iman Dzulhilmi bin Dzulkifle</b>. I am the 4th child out of 5 siblings.
+            Having a humble family background taught me the meaning of responsibility and teamwork. Apart from focusing
+            on daily tasks, I have a deep interest in the digital world where
+            <b>I really like playing video games (gaming)</b>.
+          </p>
+
+          <p style="font-size: 18px; color: #333; text-align: justify;">
+            Playing video games helps me develop important skills such as critical thinking, strategic
+            decision-making, and high concentration.Gaming also trains me to solve problems quickly under pressure,
+            manage time efficiently, and work collaboratively in team-based environments. These skills have contributed
+            positively to my personal development and can be applied in both academic settings and real-life situations.
+          </p>
+
+          <div style="margin-top: 20px;">
+            <span
+              style="background-color: black; color: yellow; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-right: 5px; border: 1px solid yellow;">INTELLIGENT</span>
+            <span
+              style="background-color: black; color: yellow; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-right: 5px; border: 1px solid yellow;">CREATIVE
+              THINKING</span>
+            <span
+              style="background-color: black; color: yellow; padding: 5px 15px; border-radius: 20px; font-size: 14px; border: 1px solid yellow;">STRATEGIC</span>
+            <span
+              style="background-color: black; color: yellow; padding: 5px 15px; border-radius: 20px; font-size: 14px; border: 1px solid yellow;">HEARTFUL</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <table border="0" width="1200" align="center" cellpadding="20" cellspacing="0" bgcolor="#f4f4f4"
+      style="border-radius: 15px;">
+      <tr>
+        <td>
+          <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/5iJhT6Qt5BsDxNepL2F0fs?utm_source=generator" width="100%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+
+      // Format Tarikh (Contoh: Saturday, Dec 20, 2025)
+      const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+      const dateString = now.toLocaleDateString('en-US', options);
+
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;
+      document.getElementById('date').textContent = dateString;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+
+</html>
