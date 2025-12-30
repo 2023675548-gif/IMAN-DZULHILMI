@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;700&display=swap"
         rel="stylesheet">
-</head>
 
-<body>
-    <div class="video-container">
-        <video autoplay muted loop poster="poster_image.jpg">
-            <source src="WallpaperGerak.mp4" type="video/mp4">
-        </video>
-    </div>
     <style>
+        /* 1. FLOATING GADGET WAKTU & TARIKH */
         .floating-clock {
             position: fixed;
             bottom: 20px;
@@ -32,143 +26,215 @@
             min-width: 150px;
             box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
         }
+
+        /* 2. BACK TO TOP BUTTON STYLE */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 200px;
+            /* Jarak supaya tidak bertindih dengan jam */
+            background-color: black;
+            color: yellow;
+            border: 2px solid yellow;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background-color: yellow;
+            color: black;
+            transform: scale(1.1);
+            box-shadow: 0 0 25px yellow;
+        }
+
+        /* 3. ANIMASI KAD PENCAPAIAN */
+        .achievement-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 255, 0, 0.2) !important;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+</head>
 
-    <body bgcolor="white" style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;">
+<body style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;">
 
-        <div class="floating-clock">
-            <div id="date" style="font-size: 11px; margin-bottom: 5px; color: white;"></div>
-            <div id="clock" style="font-size: 22px; font-weight: bold;">00:00:00</div>
-        </div>
-        <nav class="navbar">
-            <div class="logo">IMAN HILMI</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Overview</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="achievement.html" class="active">Achievement</a></li>
-                <li><a href="family.html">Family</a></li>
-            </ul>
-        </nav>
+    <div class="video-container">
+        <video autoplay muted loop poster="poster_image.jpg">
+            <source src="WallpaperGerak.mp4" type="video/mp4">
+        </video>
+    </div>
 
-        <div align="center">
+    <div class="floating-clock">
+        <div id="date" style="font-size: 11px; margin-bottom: 5px; color: white;"></div>
+        <div id="clock" style="font-size: 22px; font-weight: bold;">00:00:00</div>
+    </div>
 
-            <br><br>
-            <table border="0" width="900" cellpadding="0" cellspacing="0"
-                style="box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
-                <tr>
-                    <td bgcolor="black" align="center" style="padding: 20px; border-radius: 10px 10px 0px 0px;">
-                        <h1
-                            style="color: yellow; margin: 0; letter-spacing: 4px; text-transform: uppercase; font-size: 28px;">
-                            Achievements & Awards
-                        </h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td bgcolor="yellow" height="8"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#f4f4f4" align="center" style="padding: 10px; border-radius: 0px 0px 10px 10px;">
-                        <p style="color: #444; margin: 0; font-style: italic;">"Effort is the ladder to success. Every
-                            dream
-                            begins
-                            with the first step."</p>
-                    </td>
-                </tr>
-            </table>
-            <br><br>
+    <button id="backToTop" title="Go to top">↑</button>
 
-            <table border="0" width="900" bgcolor="#f4f4f4" cellpadding="0" cellspacing="0"
-                style="margin-bottom: 40px; border: 2px solid black; border-radius: 20px; box-shadow: 10px 10px 0px yellow; overflow: hidden;">
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 0 15px 0;">
-                        <div
-                            style="background: black; color: yellow; display: inline-block; padding: 8px 25px; border-radius: 50px; font-weight: bold; font-size: 20px;">
-                            🏆 PING PONG COMPETITION CHAMPION
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="50%" align="center" style="padding-bottom: 5px;">
-                        <img src="Medalp.jpg" width="250"
-                            style="border: 5px solid white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-                        <p style="margin: 8px 0; font-weight: bold; color: black;">MEDAL PINGPONG</p>
-                    </td>
-                    <td width="50%" align="center" style="padding-bottom: 5px;">
-                        <img src="Trofip.jpg" width="250"
-                            style="border: 5px solid white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-                        <p style="margin: 8px 0; font-weight: bold; color: black;">TROPHY PINGPONG</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 0px 50px 30px 50px;">
-                        <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0; max-width: 750px;">
-                            Sweet victory in the district-level Ping Pong tournament.
-                            High training discipline and mental focus were the main keys
-                            to my success in winning the gold medal and the champion trophy.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+    <nav class="navbar">
+        <div class="logo">IMAN HILMI</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="achievement.html" class="active">Achievement</a></li>
+            <li><a href="family.html">Family</a></li>
+        </ul>
+    </nav>
 
-            <table border="0" width="900" bgcolor="black" cellpadding="30" cellspacing="0"
-                style="margin-bottom: 40px; border-radius: 20px; box-shadow: 10px 10px 0px #333;">
-                <tr>
-                    <td width="40%" align="center">
-                        <img src="Bola Tampar.jpg" width="280" style="border: 3px solid yellow; border-radius: 15px;">
-                    </td>
-                    <td width="60%" valign="top">
-                        <div
-                            style="background: yellow; color: black; display: inline-block; padding: 5px 15px; font-weight: bold; border-radius: 5px; margin-bottom: 15px; font-size: 12px;">
-                            🏐 VOLLEYBALL CHAMPIONSHIP</div>
-                        <h2 style="color: yellow; margin-top: 0; font-size: 24px;">🥈Johor Ranking</h2>
-                        <p style="color: white; font-size: 17px; line-height: 1.8; text-align: justify; margin: 0;">
-                            I managed to win second place in the Johor volleyball tournament proving my sportsmanship
-                            strong team cooperation consistent performance throughout the competition.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+    <div align="center">
+        <br><br>
 
-            <table border="0" width="900" bgcolor="#f4f4f4" cellpadding="30" cellspacing="0"
-                style="margin-bottom: 40px; border: 2px solid black; border-radius: 20px; box-shadow: -10px 10px 0px black;">
-                <tr>
-                    <td width="60%" valign="top">
-                        <div
-                            style="background: black; color: yellow; display: inline-block; padding: 5px 15px; font-weight: bold; border-radius: 5px; margin-bottom: 15px; font-size: 18px;">
-                            🎮 E-SPORT 🎮</div>
-                        <h2 style="color: black; margin-top: 0; font-size: 24px;">E-Sports Achievements (Mobile Legends:
-                            Bang Bang)</h2>
-                        <p style="color: #333; font-size: 17px; line-height: 1.8; text-align: justify; margin: 0;">
-                            I managed to win the Mobile Legends: Bang Bang tournament as a representative of Johor, as a
-                            result of strong team collaboration,effective game strategy,good communication and high
-                            commitment and discipline in the world of e-sports.
-                        </p>
-                    </td>
-                    <td width="80%" align="center">
-                        <img src="ESPORT.jpg" width="280"
-                            style="border: 5px solid white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    </td>
-                </tr>
-            </table>
+        <table border="0" width="900" cellpadding="0" cellspacing="0" style="box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+            <tr>
+                <td bgcolor="black" align="center" style="padding: 20px; border-radius: 10px 10px 0px 0px;">
+                    <h1
+                        style="color: yellow; margin: 0; letter-spacing: 4px; text-transform: uppercase; font-size: 28px; font-family: 'Orbitron';">
+                        Achievements & Awards
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="yellow" height="8"></td>
+            </tr>
+            <tr>
+                <td bgcolor="#f4f4f4" align="center" style="padding: 15px; border-radius: 0px 0px 10px 10px;">
+                    <p style="color: #444; margin: 0; font-style: italic;">"Effort is the ladder to success. Every dream
+                        begins with the first step."</p>
+                </td>
+            </tr>
+        </table>
 
-            <br>
-            <p style="color: #999; font-size: 12px;">© 2024 Iman Dzulhilmi - Achievement Showcase</p>
-            <br>
+        <br><br>
 
-        </div>
-        <script>
-            function updateClock() {
-                const now = new Date();
-                const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
-                document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
-                document.getElementById('clock').textContent = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0') + ":" + now.getSeconds().toString().padStart(2, '0');
+        <table border="0" width="900" bgcolor="#f4f4f4" cellpadding="0" cellspacing="0" class="achievement-card"
+            style="margin-bottom: 40px; border: 2px solid black; border-radius: 20px; box-shadow: 10px 10px 0px yellow; overflow: hidden;">
+            <tr>
+                <td colspan="2" align="center" style="padding: 25px 0 15px 0;">
+                    <div
+                        style="background: black; color: yellow; display: inline-block; padding: 8px 30px; border-radius: 50px; font-weight: bold; font-size: 20px; font-family: 'Orbitron';">
+                        🏆 PING PONG COMPETITION CHAMPION
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" align="center" style="padding-bottom: 20px;">
+                    <img src="Medalp.jpg" width="250"
+                        style="border: 5px solid white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <p
+                        style="margin: 10px 0; font-weight: bold; color: black; font-family: 'Orbitron'; font-size: 14px;">
+                        MEDAL PINGPONG</p>
+                </td>
+                <td width="50%" align="center" style="padding-bottom: 20px;">
+                    <img src="Trofip.jpg" width="250"
+                        style="border: 5px solid white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <p
+                        style="margin: 10px 0; font-weight: bold; color: black; font-family: 'Orbitron'; font-size: 14px;">
+                        TROPHY PINGPONG</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="padding: 0px 50px 35px 50px;">
+                    <p
+                        style="font-size: 18px; color: #333; line-height: 1.6; margin: 0; max-width: 750px; text-align: center;">
+                        Sweet victory in the district-level Ping Pong tournament. High training discipline and mental
+                        focus were the main keys to my success in winning the gold medal and the champion trophy.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <table border="0" width="900" bgcolor="black" cellpadding="30" cellspacing="0" class="achievement-card"
+            style="margin-bottom: 40px; border-radius: 20px; box-shadow: 10px 10px 0px #333;">
+            <tr>
+                <td width="40%" align="center">
+                    <img src="Bola Tampar.jpg" width="280" style="border: 3px solid yellow; border-radius: 15px;">
+                </td>
+                <td width="60%" valign="top">
+                    <div
+                        style="background: yellow; color: black; display: inline-block; padding: 5px 15px; font-weight: bold; border-radius: 5px; margin-bottom: 15px; font-size: 12px; font-family: 'Orbitron';">
+                        🏐 VOLLEYBALL CHAMPIONSHIP
+                    </div>
+                    <h2 style="color: yellow; margin-top: 0; font-size: 26px; font-family: 'Orbitron';">🥈 Johor Ranking
+                    </h2>
+                    <p style="color: white; font-size: 17px; line-height: 1.8; text-align: justify; margin: 0;">
+                        I managed to win second place in the Johor volleyball tournament, proving my sportsmanship,
+                        strong team cooperation, and consistent performance throughout the competition.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <table border="0" width="900" bgcolor="#f4f4f4" cellpadding="30" cellspacing="0" class="achievement-card"
+            style="margin-bottom: 40px; border: 2px solid black; border-radius: 20px; box-shadow: -10px 10px 0px black;">
+            <tr>
+                <td width="65%" valign="top">
+                    <div
+                        style="background: black; color: yellow; display: inline-block; padding: 5px 15px; font-weight: bold; border-radius: 5px; margin-bottom: 15px; font-size: 18px; font-family: 'Orbitron';">
+                        🎮 E-SPORT 🎮
+                    </div>
+                    <h2 style="color: black; margin-top: 0; font-size: 24px; font-family: 'Orbitron';">Mobile Legends:
+                        Bang Bang</h2>
+                    <p style="color: #333; font-size: 17px; line-height: 1.8; text-align: justify; margin: 0;">
+                        I managed to win the Mobile Legends: Bang Bang tournament as a representative of Johor. This was
+                        a result of strong team collaboration, effective game strategy, good communication, and high
+                        commitment in the world of e-sports.
+                    </p>
+                </td>
+                <td width="35%" align="center">
+                    <img src="ESPORT.jpg" width="280"
+                        style="border: 5px solid white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </td>
+            </tr>
+        </table>
+
+        <p style="color: white; font-size: 12px; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px;">
+            © 2025 Iman Dzulhilmi - Achievement Showcase
+        </p>
+        <br><br>
+
+    </div>
+
+    <script>
+        // FUNGSI JAM DIGITAL
+        function updateClock() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+            document.getElementById('clock').textContent = now.getHours().toString().padStart(2, '0') + ":" +
+                now.getMinutes().toString().padStart(2, '0') + ":" +
+                now.getSeconds().toString().padStart(2, '0');
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // FUNGSI BACK TO TOP (SMOOTH SLIDE)
+        const topBtn = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
             }
-            setInterval(updateClock, 1000); updateClock();
-        </script>
-    </body>
+        };
+
+        topBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
+</body>
 
 </html>
-
-
