@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;700&display=swap"
         rel="stylesheet">
-</head>
 
-<body>
-    <div class="video-container">
-        <video autoplay muted loop poster="poster_image.jpg">
-            <source src="WallpaperGerak.mp4" type="video/mp4">
-        </video>
-    </div>
     <style>
+        /* 1. FLOATING GADGET WAKTU & TARIKH */
         .floating-clock {
             position: fixed;
             bottom: 20px;
@@ -32,198 +26,236 @@
             min-width: 150px;
             box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
         }
+
+        /* 2. BACK TO TOP BUTTON */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 200px;
+            background-color: black;
+            color: yellow;
+            border: 2px solid yellow;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background-color: yellow;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* 3. ANIMASI ZOOM & GLOW PADA GAMBAR */
+        .family-card img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .family-card img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px yellow;
+        }
+
+        /* 4. ANIMASI BERDENYUT UNTUK GARIS GLOWING */
+        @keyframes pulsate {
+            0% {
+                opacity: 0.6;
+                box-shadow: 0 0 10px yellow;
+            }
+
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 25px yellow, 0 0 45px yellow;
+            }
+
+            100% {
+                opacity: 0.6;
+                box-shadow: 0 0 10px yellow;
+            }
+        }
+
+        .glow-line {
+            background: yellow;
+            box-shadow: 0 0 15px yellow, 0 0 30px yellow;
+            animation: pulsate 2s infinite ease-in-out;
+        }
+
+        .family-card {
+            transition: transform 0.3s ease;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+</head>
 
-    <body bgcolor="white" style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;">
+<body style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0; background-color: white;">
 
-        <div class="floating-clock">
-            <div id="date" style="font-size: 11px; margin-bottom: 5px; color: white;"></div>
-            <div id="clock" style="font-size: 22px; font-weight: bold;">00:00:00</div>
-        </div>
-        <style>
-            /* Animasi Zoom & Glow pada Gambar */
-            .family-card img {
-                transition: transform 0.4s ease, box-shadow 0.4s ease;
-                cursor: pointer;
-            }
+    <div class="video-container">
+        <video autoplay muted loop poster="poster_image.jpg">
+            <source src="WallpaperGerak.mp4" type="video/mp4">
+        </video>
+    </div>
 
-            .family-card img:hover {
-                transform: scale(1.1);
-                box-shadow: 0 0 25px yellow;
-            }
+    <div class="floating-clock">
+        <div id="date" style="font-size: 11px; margin-bottom: 5px; color: white;"></div>
+        <div id="clock" style="font-size: 22px; font-weight: bold;">00:00:00</div>
+    </div>
 
-            /* Animasi Berdenyut untuk Garis Glowing */
-            @keyframes pulsate {
-                0% {
-                    opacity: 0.6;
-                    box-shadow: 0 0 10px yellow;
-                }
+    <button id="backToTop" title="Go to top">↑</button>
 
-                50% {
-                    opacity: 1;
-                    box-shadow: 0 0 25px yellow, 0 0 45px yellow;
-                }
+    <nav class="navbar">
+        <div class="logo">IMAN HILMI</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="achievement.html">Achievement</a></li>
+            <li><a href="family.html" class="active">Family</a></li>
+        </ul>
+    </nav>
 
-                100% {
-                    opacity: 0.6;
-                    box-shadow: 0 0 10px yellow;
-                }
-            }
+    <div align="center">
+        <br><br>
 
-            .glow-line {
-                background: yellow;
-                box-shadow: 0 0 15px yellow, 0 0 30px yellow;
-                animation: pulsate 2s infinite ease-in-out;
-            }
+        <table border="0" width="950" cellpadding="0" cellspacing="0"
+            style="border: 2px solid yellow; box-shadow: 0px 0px 20px rgba(255,255,0,0.4);">
+            <tr>
+                <td bgcolor="yellow" align="center" style="padding: 20px;">
+                    <h1
+                        style="color: black; margin: 0; letter-spacing: 8px; text-transform: uppercase; font-size: 28px; font-family: 'Orbitron';">
+                        ❤️ MY LOVELY FAMILY ❤️
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#111" align="center" style="padding: 10px;">
+                    <p style="color: yellow; margin: 0; font-style: italic;">"The light of my life starts from here."
+                    </p>
+                </td>
+            </tr>
+        </table>
 
-            .family-card {
-                transition: transform 0.3s ease;
-            }
-        </style>
-        </head>
+        <br><br>
 
-        <body bgcolor="black" style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0; color: white;">
-            </head>
-
-            <body bgcolor="black" style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0; color: white;">
-                </head>
-
-                <body bgcolor="white" style="font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;">
-                    <nav class="navbar">
-                        <div class="logo">IMAN HILMI</div>
-                        <ul class="nav-links">
-                            <li><a href="index.html">Overview</a></li>
-                            <li><a href="education.html">Education</a></li>
-                            <li><a href="achievement.html">Achievement</a></li>
-                            <li><a href="family.html" class="active">Family</a></li>
-                        </ul>
-                    </nav>
-                    <div align="center">
-
-                        <br><br>
-                        <table border="0" width="950" cellpadding="0" cellspacing="0"
-                            style="border: 2px solid yellow; box-shadow: 0px 0px 20px rgba(255,255,0,0.4);">
-                            <tr>
-                                <td bgcolor="yellow" align="center" style="padding: 20px;">
-                                    <h1
-                                        style="color: black; margin: 0; letter-spacing: 8px; text-transform: uppercase; font-size: 28px;">
-                                        ❤️ MY LOVELY FAMILY ❤️
-                                    </h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#111" align="center" style="padding: 10px;">
-                                    <p style="color: yellow; margin: 0; font-style: italic;">"The light of my life
-                                        starts
-                                        from here."</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <br><br>
-
-                        <table border="0" width="800" cellspacing="15">
-                            <tr>
-                                <td width="50%" align="center" class="family-card" style="padding: 20px;">
-                                    <div
-                                        style="display: inline-block; padding: 6px; background: yellow; border-radius: 50%; box-shadow: 0 0 25px yellow;">
-                                        <img src="Ayah.jpg" width="180" height="180"
-                                            style="border-radius: 50%; border: 4px solid black; object-fit: cover; display: block;">
-                                    </div>
-                                    <h3
-                                        style="margin: 20px 0 5px 0; color: yellow; text-transform: uppercase; letter-spacing: 2px;">
-                                        FATHER</h3>
-                                    <p style="color: white; margin: 0; font-size: 18px;">DZULKIFLE BIN ISMAIL</p>
-                                </td>
-                                <td width="50%" align="center" class="family-card" style="padding: 20px;">
-                                    <div
-                                        style="display: inline-block; padding: 6px; background: yellow; border-radius: 50%; box-shadow: 0 0 25px yellow;">
-                                        <img src="ibu.jpg" width="180" height="180"
-                                            style="border-radius: 50%; border: 4px solid black; object-fit: cover; display: block;">
-                                    </div>
-                                    <h3
-                                        style="margin: 20px 0 5px 0; color: yellow; text-transform: uppercase; letter-spacing: 2px;">
-                                        MOTHER</h3>
-                                    <p style="color: white; margin: 0; font-size: 18px;">AISHAH BINTI ADAM</p>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <br>
-                        <div class="glow-line" style="width: 4px; height: 50px; margin: 0 auto;"></div>
-                        <div class="glow-line" style="width: 800px; height: 4px; margin: 0 auto;"></div>
-                        <div class="glow-line" style="width: 4px; height: 30px; margin: 0 auto;"></div>
-                        <br>
-
-                        <table border="0" width="950" cellspacing="15">
-                            <tr>
-                                <td width="33%" align="center" class="family-card"
-                                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: #0a0a0a;">
-                                    <img src="Along.jpg" width="140" height="140"
-                                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
-                                    <h3 style="margin: 10px 0 5px 0; color: #ddd;">AMIR ASYRAF</h3>
-                                    <p style="font-size: 13px; color: yellow;">ELDER BROTHER</p>
-                                </td>
-                                <td width="33%" align="center" class="family-card"
-                                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: #0a0a0a;">
-                                    <img src="angah.jpg" width="140" height="140"
-                                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
-                                    <h3 style="margin: 10px 0 5px 0; color: #ddd;">AYU NABILAH</h3>
-                                    <p style="font-size: 13px; color: yellow;">SISTER</p>
-                                </td>
-                                <td width="33%" align="center" class="family-card"
-                                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: #0a0a0a;">
-                                    <img src="Afiq.jpg" width="140" height="140"
-                                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
-                                    <h3 style="margin: 10px 0 5px 0; color: #ddd;">AFIQ ISKANDAR</h3>
-                                    <p style="font-size: 13px; color: yellow;">THIRD BROTHER</p>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table border="0" width="650" cellspacing="15">
-                            <tr>
-                                <td width="50%" align="center" class="family-card"
-                                    style="padding: 20px; border: 2px solid yellow; border-radius: 15px; background: #1a1a1a; box-shadow: 0 0 20px rgba(255,255,0,0.2);">
-                                    <img src="Aku.jpg" width="160" height="160"
-                                        style="border-radius: 10px; border: 3px solid yellow; object-fit: cover;">
-                                    <h2 style="margin: 10px 0 5px 0; color: yellow; letter-spacing: 1px;">IMAN DZULHILMI
-                                    </h2>
-                                    <p style="font-size: 13px; color: white; letter-spacing: 2px; font-weight: bold;">
-                                        (ME)
-                                    </p>
-                                </td>
-                                <td width="50%" align="center" class="family-card"
-                                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: #0a0a0a;">
-                                    <img src="pali.jpg" width="140" height="140"
-                                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
-                                    <h3 style="margin: 10px 0 5px 0; color: #ddd;">IMAN DZULFADHLI</h3>
-                                    <p style="font-size: 13px; color: yellow;">TWIN BROTHER</p>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <br><br>
-                        <p style="color: #444; font-size: 12px; letter-spacing: 1px;">© 2024 Iman Dzulhilmi - The
-                            Glowing
-                            Legacy</p>
-                        <br>
+        <table border="0" width="800" cellspacing="15">
+            <tr>
+                <td width="50%" align="center" class="family-card" style="padding: 20px;">
+                    <div
+                        style="display: inline-block; padding: 6px; background: yellow; border-radius: 50%; box-shadow: 0 0 25px yellow;">
+                        <img src="Ayah.jpg" width="180" height="180"
+                            style="border-radius: 50%; border: 4px solid black; object-fit: cover; display: block;">
                     </div>
-                    <script>
-                        function updateClock() {
-                            const now = new Date();
-                            const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
-                            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
-                            document.getElementById('clock').textContent = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0') + ":" + now.getSeconds().toString().padStart(2, '0');
-                        }
-                        setInterval(updateClock, 1000); updateClock();
-                    </script>
-                </body>
+                    <h3
+                        style="margin: 20px 0 5px 0; color: yellow; text-transform: uppercase; letter-spacing: 2px; font-family: 'Orbitron';">
+                        FATHER</h3>
+                    <p style="color: white; margin: 0; font-size: 18px; text-shadow: 2px 2px 4px black;">DZULKIFLE BIN
+                        ISMAIL</p>
+                </td>
+                <td width="50%" align="center" class="family-card" style="padding: 20px;">
+                    <div
+                        style="display: inline-block; padding: 6px; background: yellow; border-radius: 50%; box-shadow: 0 0 25px yellow;">
+                        <img src="ibu.jpg" width="180" height="180"
+                            style="border-radius: 50%; border: 4px solid black; object-fit: cover; display: block;">
+                    </div>
+                    <h3
+                        style="margin: 20px 0 5px 0; color: yellow; text-transform: uppercase; letter-spacing: 2px; font-family: 'Orbitron';">
+                        MOTHER</h3>
+                    <p style="color: white; margin: 0; font-size: 18px; text-shadow: 2px 2px 4px black;">AISHAH BINTI
+                        ADAM</p>
+                </td>
+            </tr>
+        </table>
 
-</html>
+        <br>
+        <div class="glow-line" style="width: 4px; height: 50px; margin: 0 auto;"></div>
+        <div class="glow-line" style="width: 800px; height: 4px; margin: 0 auto;"></div>
+        <div class="glow-line" style="width: 4px; height: 30px; margin: 0 auto;"></div>
+        <br>
+
+        <table border="0" width="950" cellspacing="15">
+            <tr>
+                <td width="33%" align="center" class="family-card"
+                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: rgba(10, 10, 10, 0.9);">
+                    <img src="Along.jpg" width="140" height="140"
+                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
+                    <h3 style="margin: 10px 0 5px 0; color: #ddd; font-family: 'Orbitron';">AMIR ASYRAF</h3>
+                    <p style="font-size: 13px; color: yellow;">ELDER BROTHER</p>
+                </td>
+                <td width="33%" align="center" class="family-card"
+                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: rgba(10, 10, 10, 0.9);">
+                    <img src="angah.jpg" width="140" height="140"
+                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
+                    <h3 style="margin: 10px 0 5px 0; color: #ddd; font-family: 'Orbitron';">AYU NABILAH</h3>
+                    <p style="font-size: 13px; color: yellow;">SISTER</p>
+                </td>
+                <td width="33%" align="center" class="family-card"
+                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: rgba(10, 10, 10, 0.9);">
+                    <img src="Afiq.jpg" width="140" height="140"
+                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
+                    <h3 style="margin: 10px 0 5px 0; color: #ddd; font-family: 'Orbitron';">AFIQ ISKANDAR</h3>
+                    <p style="font-size: 13px; color: yellow;">THIRD BROTHER</p>
+                </td>
+            </tr>
+        </table>
+
+        <table border="0" width="650" cellspacing="15">
+            <tr>
+                <td width="50%" align="center" class="family-card"
+                    style="padding: 20px; border: 2px solid yellow; border-radius: 15px; background: rgba(26, 26, 26, 0.9); box-shadow: 0 0 20px rgba(255,255,0,0.2);">
+                    <img src="Aku.jpg" width="160" height="160"
+                        style="border-radius: 10px; border: 3px solid yellow; object-fit: cover;">
+                    <h2 style="margin: 10px 0 5px 0; color: yellow; letter-spacing: 1px; font-family: 'Orbitron';">IMAN
+                        DZULHILMI</h2>
+                    <p style="font-size: 13px; color: white; letter-spacing: 2px; font-weight: bold;">(ME)</p>
+                </td>
+                <td width="50%" align="center" class="family-card"
+                    style="padding: 20px; border: 1px solid #333; border-radius: 15px; background: rgba(10, 10, 10, 0.9);">
+                    <img src="pali.jpg" width="140" height="140"
+                        style="border-radius: 10px; border: 2px solid white; object-fit: cover;">
+                    <h3 style="margin: 10px 0 5px 0; color: #ddd; font-family: 'Orbitron';">IMAN DZULFADHLI</h3>
+                    <p style="font-size: 13px; color: yellow;">TWIN BROTHER</p>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+        <p
+            style="color: white; font-size: 12px; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px; display: inline-block;">
+            © 2025 Iman Dzulhilmi - The Glowing Legacy
+        </p>
+        <br><br>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+            document.getElementById('clock').textContent = now.getHours().toString().padStart(2, '0') + ":" +
+                now.getMinutes().toString().padStart(2, '0') + ":" +
+                now.getSeconds().toString().padStart(2, '0');
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const topBtn = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        topBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 </body>
 
-
 </html>
-
