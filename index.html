@@ -31,13 +31,12 @@
       }
     }
 
-    /* 2. FLOATING GADGET WAKTU & TARIKH (DI PENJURU KANAN BAWAH) */
+    /* 2. FLOATING GADGET WAKTU & TARIKH */
     .floating-clock {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: rgba(0, 0, 0, 0.8);
-      /* Hitam Transparent */
       color: yellow;
       padding: 15px;
       border-radius: 15px;
@@ -55,6 +54,34 @@
       box-shadow: 0 0 30px yellow !important;
       transition: all 0.4s ease;
     }
+
+    /* 4. BACK TO TOP BUTTON STYLE */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 200px;
+      /* Jarak dari kanan supaya tak langgar jam */
+      background-color: black;
+      color: yellow;
+      border: 2px solid yellow;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #backToTop:hover {
+      background-color: yellow;
+      color: black;
+      transform: scale(1.1);
+      box-shadow: 0 0 25px yellow;
+    }
   </style>
 </head>
 
@@ -63,6 +90,8 @@
     <div id="date" style="font-size: 11px; margin-bottom: 5px; color: white; letter-spacing: 1px;"></div>
     <div id="clock" style="font-size: 22px; font-weight: bold; letter-spacing: 2px;">00:00:00</div>
   </div>
+
+  <button id="backToTop" title="Go to top">↑</button>
 
   <div class="video-container">
     <video autoplay muted loop poster="poster_image.jpg">
@@ -88,7 +117,6 @@
 
     <table border="0" width="1200" align="center" cellpadding="30" cellspacing="0" bgcolor="#f4f4f4"
       style="border-radius: 15px; font-family: 'Trebuchet MS', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-
       <tr>
         <td width="30%" align="center" valign="middle">
           <div class="profile-box"
@@ -103,21 +131,17 @@
             style="background-color: black; color: yellow; display: inline-block; padding: 8px 25px; border-radius: 5px; margin-bottom: 20px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; border: 1px solid yellow;">
             MY PROFILE
           </div>
-
           <p style="font-size: 18px; color: #333; text-align: justify; margin-top: 0;">
             My name is <b>Iman Dzulhilmi bin Dzulkifle</b>. I am the 4th child out of 5 siblings.
             Having a humble family background taught me the meaning of responsibility and teamwork. Apart from focusing
             on daily tasks, I have a deep interest in the digital world where
             <b>I really like playing video games (gaming)</b>.
           </p>
-
           <p style="font-size: 18px; color: #333; text-align: justify;">
             Playing video games helps me develop important skills such as critical thinking, strategic
-            decision-making, and high concentration.Gaming also trains me to solve problems quickly under pressure,
-            manage time efficiently, and work collaboratively in team-based environments. These skills have contributed
-            positively to my personal development and can be applied in both academic settings and real-life situations.
+            decision-making, and high concentration. Gaming also trains me to solve problems quickly under pressure,
+            manage time efficiently, and work collaboratively in team-based environments.
           </p>
-
           <div style="margin-top: 20px;">
             <span
               style="background-color: black; color: yellow; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-right: 5px; border: 1px solid yellow;">INTELLIGENT</span>
@@ -149,24 +173,37 @@
   </div>
 
   <script>
+    // FUNGSI JAM
     function updateClock() {
       const now = new Date();
-
-      // Format Tarikh (Contoh: Saturday, Dec 20, 2025)
       const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
       const dateString = now.toLocaleDateString('en-US', options);
-
       const hours = String(now.getHours()).padStart(2, '0');
       const minutes = String(now.getMinutes()).padStart(2, '0');
       const seconds = String(now.getSeconds()).padStart(2, '0');
-
       document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;
       document.getElementById('date').textContent = dateString;
     }
     setInterval(updateClock, 1000);
     updateClock();
-  </script>
 
+    // FUNGSI BACK TO TOP
+    const topBtn = document.getElementById("backToTop");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+
+    topBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+  </script>
 </body>
 
 </html>
